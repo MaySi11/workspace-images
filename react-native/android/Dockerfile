@@ -29,15 +29,19 @@ ENV PATH=${CMAKE_BIN_PATH}:${ANDROID_HOME}/cmdline-tools/latest/bin:${ANDROID_HO
 # Install system dependencies
 RUN apt update -qq && apt install -qq -y --no-install-recommends \
         apt-transport-https \
+        bash \
+        ca-certificates \
         curl \
         file \
         gcc \
         git \
         g++ \
         gnupg2 \
+        jq \
         libc++1-11 \
         libgl1 \
         libtcmalloc-minimal4 \
+        locales \
         make \
         openjdk-17-jdk-headless \
         openssh-client \

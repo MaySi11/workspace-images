@@ -103,8 +103,7 @@ ENV LC_ALL=en_IN.UTF-8
 ENV TZ=Asia/Kolkata
 
 # Remove the `ubuntu` user and add a user `dev-user` so that you're not developing as the `root` user
-RUN userdel -r ubuntu && \
-    useradd dev-user \
+RUN useradd dev-user \
     --create-home \
     --shell=/bin/bash \
     --uid=1000 \

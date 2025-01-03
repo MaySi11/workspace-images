@@ -133,4 +133,4 @@ RUN adduser -D -u 1000 -s /bin/bash -h /home/dev-user dev-user && \
 
 
 USER dev-user
-RUN pipx ensurepath # adds user's bin directory to PATH
+# RUN pipx ensurepath # adds user's bin directory to PATH

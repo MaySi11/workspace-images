@@ -29,8 +29,6 @@ RUN set -eux; \
 		dpkg-dev dpkg \
 		findutils \
 		gcc \
-        git \
-        bash \
 		gdbm-dev \
 		libc-dev \
 		libffi-dev \
@@ -43,7 +41,6 @@ RUN set -eux; \
 		pax-utils \
 		readline-dev \
 		sqlite-dev \
-        sudo \
 		tcl-dev \
 		tk \
 		tk-dev \
@@ -123,6 +120,8 @@ RUN set -eux; \
 		[ ! -e "/usr/local/bin/$dst" ]; \
 		ln -svT "$src" "/usr/local/bin/$dst"; \
 	done
+
+RUN apk add --no-cache git bash sudo
 
 # Remove the `ubuntu` user and add a user `dev-user` so that you're not developing as the `root` user
 RUN adduser -D -u 1000 -s /bin/bash -h /home/dev-user dev-user && \

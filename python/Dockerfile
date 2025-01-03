@@ -121,7 +121,7 @@ RUN set -eux; \
 		ln -svT "$src" "/usr/local/bin/$dst"; \
 	done
 
-RUN apk add --no-cache git bash sudo
+RUN apk add --no-cache git bash sudo curl 
 
 # Remove the `ubuntu` user and add a user `dev-user` so that you're not developing as the `root` user
 RUN adduser -D -u 1000 -s /bin/bash -h /home/dev-user dev-user && \

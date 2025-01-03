@@ -3,15 +3,8 @@ USER root
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
 
-# Generate the desired locale (en_IN.UTF-8)
-RUN locale-gen en_IN.UTF-8
-
-# Make typing unicode characters in the terminal work.
 ENV LANG=en_IN.UTF-8
-ENV LANGUAGE=en_IN.UTF-8
-ENV LC_ALL=en_IN.UTF-8
 
-ENV TZ=Asia/Kolkata
 
 # runtime dependencies
 RUN set -eux; \
